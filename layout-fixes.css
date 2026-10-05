@@ -74,6 +74,36 @@ body.night .hero-note {
 
 /* Referência visual ao relógio do Big Ben no cronômetro. */
 .countdown-card { position: relative; overflow: hidden; }
+
+/* Coroa dourada: um detalhe real inspirado na monarquia de Londres. */
+.brand {
+  position: relative;
+}
+
+.brand-crown {
+  position: absolute;
+  top: -16px;
+  left: 63px;
+  width: 31px;
+  height: 20px;
+  overflow: visible;
+  fill: #f5d27a22;
+  stroke: var(--yellow);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.3;
+  filter: drop-shadow(0 2px 3px #0005);
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .brand-crown {
+    top: -14px;
+    left: 56px;
+    width: 27px;
+    height: 18px;
+  }
+}
 .countdown-card > :not(.countdown-tower) { position: relative; z-index: 1; }
 .countdown-tower {
   position: absolute;
