@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071f49">
+  <meta name="description" content="Uma carta de amor para uma aventura em Londres.">
+  <title>Para você, em Londres ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="enhancements.css">
+  <link rel="stylesheet" href="layout-fixes.css">
+  <link rel="stylesheet" href="soundtrack.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <div class="page-progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <header class="header" id="topo">
+    <a class="brand" href="#inicio" aria-label="Voltar ao início">
+      <span class="flag" aria-hidden="true"></span>
+      <span>L<span class="brand-heart">♥</span>NDON</span><small>LOVE LETTER</small>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu"><span></span><span></span></button>
+    <nav class="nav" id="menu" aria-label="Navegação principal">
+      <a href="#carta">carta</a>
+      <a href="#londres">londres</a>
+      <a href="#recados">recados</a>
+      <a href="#promessa">promessa</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="nightButton" type="button" aria-label="Ativar modo noturno" title="Mudar o céu de Londres">☾</button>
+      <button class="love-button" id="heartButton" type="button"><span>♥</span> mandar amor</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-text reveal">
+        <p class="eyebrow"><span></span> DESTINO: LONDRES, INGLATERRA <span></span></p>
+        <h1 id="hero-title">Você vai<br><em>longe,</em> amor.</h1>
+        <p class="hero-lede">Por um mês, Londres terá o privilégio de ser cenário da sua coragem, do seu sorriso e de todas as versões lindas que ainda existem em você.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#carta">ler a minha carta <b>↓</b></a>
+          <div class="soundtrack-control">
+            <button class="text-button" id="soundtrackButton" type="button" aria-pressed="false"><i></i> tocar a trilha da viagem</button>
+            <p class="spotify-status" id="spotifyStatus" aria-live="polite" hidden></p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Uma ilustração de Londres">
+        <div class="sun"></div><div class="cloud cloud-a"></div><div class="cloud cloud-b"></div><div class="cloud cloud-c"></div>
+        <div class="postmark">AIR MAIL<br><b>PARA VOCÊ</b><br>♥</div>
+        <div class="plane" aria-hidden="true">✈<span></span></div>
+        <div class="bus" aria-hidden="true"><div class="bus-route">LOVE<br>01</div><div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i></div><b class="wheel one"></b><b class="wheel two"></b></div>
+        <p class="hero-note">a distância muda o mapa,<br>nunca o lugar que você ocupa em mim.</p>
+      </div>
+      <a class="scroll-cue" href="#embarque"><span></span> DESLIZE PARA COMEÇAR</a>
+    </section>
+
+    <section class="departure" id="embarque" aria-labelledby="departure-title">
+      <div class="section-number reveal"><span>01</span><i></i><small>PASSAGEM DE AMOR</small></div>
+      <div class="departure-grid">
+        <div class="departure-copy reveal">
+          <p class="eyebrow dark">PRIMEIRO: RESPIRA FUNDO</p>
+          <h2 id="departure-title">Você tem<br><em>o mundo</em><br>inteiro.</h2>
+          <p>Leva na mala tudo o que te faz ser você: a curiosidade, a coragem e esse jeito especial de fazer qualquer lugar parecer mais bonito.</p>
+        </div>
+        <article class="boarding-pass reveal" aria-label="Cartão de embarque simbólico">
+          <div class="ticket-brand"><span class="mini-flag" aria-hidden="true"></span><b>HEART AIRWAYS</b><small>ONE WAY TO ADVENTURE</small></div>
+          <div class="ticket-main">
+            <div><small>PASSAGEIRA</small><strong>MINHA PESSOA<br>FAVORITA</strong></div>
+            <div class="route"><b>BR</b><i>✈</i><b>LDN</b></div>
+            <div><small>CLASSE</small><strong>INESQUECÍVEL</strong></div>
+          </div>
+          <div class="ticket-bottom"><span>PORTÃO: CORAÇÃO</span><span>ASSENTO: SEMPRE AQUI</span><span>VALIDADE: ∞</span></div>
+          <div class="ticket-stub"><span>♥</span><small>LOVE<br>TICKET</small><b>001</b></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="letter-section" id="carta" aria-labelledby="letter-title">
+      <div class="letter-stars" aria-hidden="true">✦ &nbsp; · &nbsp; ✦ &nbsp; · &nbsp; ✦</div>
+      <article class="letter reveal">
+        <header class="letter-header"><span>LONDRES, PARA VOCÊ</span><span>COM TODO O MEU AMOR</span></header>
+        <div class="letter-body">
+          <p class="letter-kicker">UMA CARTA PARA ABRIR QUANDO QUISER</p>
+          <h2 id="letter-title">Meu amor,</h2>
+          <p>Eu queria colocar em uma mala tudo o que sinto por você, só para ter certeza de que chegaria inteiro aí. Mas descobri que não cabe: é grande demais, vivo demais, é casa demais.</p>
+          <p>Então leva apenas essa certeza: eu confio em você. Confio nos seus passos pelas ruas de Londres, no brilho do seu olhar diante do novo e nessa coragem linda que sempre existiu em você.</p>
+          <p>Vai conhecer o mundo. Prova o chá, se perde um pouquinho no metrô, tira fotos, aprende palavras novas e coleciona histórias. Eu vou amar ouvir cada uma delas.</p>
+          <p class="letter-final">E, quando a saudade apertar, lembre-se: <strong>eu te vivo inefavelmente</strong> — além de toda palavra, de todo fuso horário e de toda distância.</p>
+          <p class="signature">sempre seu,<br><b>com amor ♥</b></p>
+        </div>
+        <span class="seal" title="Selado com amor">♥</span>
+      </article>
+    </section>
+
+    <section class="london-section" id="londres" aria-labelledby="london-title">
+      <div class="london-copy reveal">
+        <p class="eyebrow light">O NOSSO MAPA AFETIVO</p>
+        <h2 id="london-title">Pontos que<br>sempre levam<br><em>a você.</em></h2>
+        <p>Entre Londres e aqui existe um oceano. Mas estes pontos lembram tudo o que continua nos ligando, onde quer que você esteja.</p>
+        <button class="button button-outline" id="showLondonButton" type="button">acender nosso mapa <b>↗</b></button>
+      </div>
+      <div class="london-map reveal" id="londonMap" aria-live="polite">
+        <div class="map-label label-one"><b>01</b><span>ORGULHO<br>DE VOCÊ</span></div>
+        <div class="map-label label-two"><b>02</b><span>SAUDADE QUE<br>VIRA ABRAÇO</span></div>
+        <div class="map-label label-three"><b>03</b><span>CONFIANÇA NO<br>SEU CAMINHO</span></div>
+        <div class="map-label label-four"><b>04</b><span>AMOR MAIOR<br>QUE O ATLÂNTICO</span></div>
+        <div class="map-label label-five"><b>05</b><span>LAR, SEMPRE<br>EM MIM</span></div>
+        <div class="river"></div>
+        <div class="map-eye"><i></i><i></i><i></i><b></b></div>
+        <div class="map-bridge"><i></i><i></i><i></i></div>
+        <div class="map-ben"><b></b><i></i></div>
+        <div class="map-pin pin-one">♥</div><div class="map-pin pin-two">✦</div><div class="map-pin pin-three">♥</div><div class="map-pin pin-four">∞</div><div class="map-pin pin-five">♥</div>
+      </div>
+    </section>
+
+    <section class="itinerary" aria-labelledby="itinerary-title">
+      <div class="itinerary-head reveal"><p class="eyebrow dark">NOSSO PEQUENO ITINERÁRIO</p><h2 id="itinerary-title">Você vai viver.<br>Eu vou <em>torcer.</em></h2></div>
+      <ol class="timeline">
+        <li class="reveal"><div class="timeline-number">01</div><div><p>ANTES DE IR</p><h3>Coragem na mala</h3><span>Leva a confiança de quem nasceu para fazer coisas bonitas, mesmo quando dá frio na barriga.</span></div><b>↘</b></li>
+        <li class="reveal"><div class="timeline-number">02</div><div><p>EM LONDRES</p><h3>Descobertas sem pressa</h3><span>Big Ben, chuva fininha, museus, parques, sotaques — e um mundo inteiro só seu para explorar.</span></div><b>↘</b></li>
+        <li class="reveal"><div class="timeline-number">03</div><div><p>NA VOLTA</p><h3>O abraço mais esperado</h3><span>Você traz as histórias. Eu trago a saudade inteira, pronta para virar abraço.</span></div><b>♥</b></li>
+      </ol>
+    </section>
+
+    <section class="countdown-section" aria-labelledby="countdown-title">
+      <div class="countdown-card reveal">
+        <div class="countdown-tower" aria-hidden="true"></div>
+        <div class="countdown-top"><span>BIG BEN TIME</span><b>♥</b><span>VOLTA · 18 OUT</span></div>
+        <p class="eyebrow light">CADA BADALADA DIMINUI A DISTÂNCIA</p>
+        <h2 id="countdown-title">O Big Ben conta<br>as horas até<br><em>você voltar.</em></h2>
+        <div class="countdown" id="countdown" data-return-date="2026-10-18T00:00:00-03:00" aria-live="polite">
+          <div><b id="days">30</b><span>dias</span></div><i></i><div><b id="hours">00</b><span>horas</span></div><i></i><div><b id="minutes">00</b><span>min</span></div><i></i><div><b id="seconds">00</b><span>seg</span></div>
+        </div>
+        <p class="countdown-note" id="countdownNote">A cada badalada do Big Ben, um instante a menos até o meu abraço.</p>
+      </div>
+    </section>
+
+    <section class="notes-section" id="recados" aria-labelledby="notes-title">
+      <div class="notes-copy reveal"><p class="eyebrow dark">PEQUENOS LEMBRETES PARA DIAS DISTANTES</p><h2 id="notes-title">Guarda estes<br><em>recados</em> com você.</h2><p>Tem um para cada tipo de dia. Clique quando precisar de mim por perto.</p></div>
+      <div class="notes-grid">
+        <button class="note note-yellow reveal" data-title="Para um dia de coragem" data-note="Você é mais corajosa do que imagina. E eu tenho tanto orgulho de ver você escolher o mundo."><span>01</span><strong>para um dia<br>de coragem</strong><b>♥</b></button>
+        <button class="note note-blue reveal" data-title="Para um dia de chuva" data-note="Se Londres estiver cinza, lembre-se de que o seu sorriso ainda é meu lugar favorito no mundo."><span>02</span><strong>para um dia<br>de chuva</strong><b>☂</b></button>
+        <button class="note note-red reveal" data-title="Para um dia de saudade" data-note="Um mês passa rápido. Mas o que eu sinto por você não tem data de volta."><span>03</span><strong>para um dia<br>de saudade</strong><b>∞</b></button>
+        <button class="note note-paper reveal" data-title="Para um dia inesquecível" data-note="Vive tudo. Depois, volta para mim com os olhos cheios de histórias e o coração ainda aqui."><span>04</span><strong>para um dia<br>inesquecível</strong><b>✦</b></button>
+      </div>
+    </section>
+
+    <section class="promise-section" id="promessa" aria-labelledby="promise-title">
+      <div class="promise-copy reveal"><p class="eyebrow">UMA PROMESSA PARA O ATLÂNTICO</p><h2 id="promise-title">O oceano fica<br>no meio.<br><em>O amor, não.</em></h2><p>Eu estarei aqui: torcendo, contando os dias, celebrando suas conquistas e amando você do mesmo jeito que amo de perto — talvez até um pouquinho mais.</p><button class="button button-dark" id="promiseButton" type="button">carimbar nossa promessa <b>♥</b></button></div>
+      <div class="promise-scene" aria-label="Londres ao entardecer"><div class="scene-moon"></div><div class="scene-cloud scene-a"></div><div class="scene-cloud scene-b"></div><div class="scene-eye"><i></i><i></i><i></i><b></b></div><div class="scene-bridge"><i></i><i></i><i></i></div><div class="scene-ben"><b></b><i></i></div><div class="scene-love">♥ &nbsp; ♥ &nbsp; ♥</div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span>FEITO PARA A PESSOA QUE DEIXA QUALQUER CIDADE MAIS BONITA</span><b>♥</b><span>LOVE, FROM HOME</span></footer>
+
+  <dialog class="modal" id="loveModal" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeModal" type="button" aria-label="Fechar recado">×</button>
+    <div class="modal-icon">♥</div><p class="modal-label" id="modalTitle">UM RECADINHO</p><p class="modal-message" id="modalMessage"></p><small>DE MIM, PARA VOCÊ</small>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

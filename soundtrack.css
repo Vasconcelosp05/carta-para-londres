@@ -1,0 +1,159 @@
+/* O conteúdo do bilhete respeita a área útil e não invade o canhoto. */
+.ticket-brand {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 132px;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.ticket-brand b {
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.ticket-brand small {
+  text-align: right;
+  line-height: 1.35;
+}
+
+.ticket-main {
+  grid-template-columns: 1fr .8fr 1fr;
+  column-gap: 18px;
+  padding-right: 112px;
+}
+
+.ticket-main > div {
+  min-width: 0;
+}
+
+.ticket-main > div:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ticket-main .route { justify-self: center; }
+
+.ticket-bottom {
+  right: 132px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 12px;
+}
+
+.ticket-bottom span:first-child { text-align: left; }
+.ticket-bottom span:nth-child(2) { text-align: center; }
+.ticket-bottom span:last-child {
+  text-align: right;
+}
+
+/* Player da trilha: só é carregado/acionado quando a pessoa abre a janela. */
+.music-modal {
+  width: min(690px, calc(100% - 32px));
+  padding: 48px 42px 38px;
+  border: 0;
+  color: var(--navy);
+  background: var(--paper);
+  box-shadow: 14px 17px 0 #071f4970;
+  text-align: center;
+}
+
+.music-modal::backdrop {
+  background: #031632d9;
+  backdrop-filter: blur(4px);
+}
+
+.music-kicker {
+  margin: 0 0 12px;
+  color: var(--red);
+  font: 9px var(--mono);
+  letter-spacing: .15em;
+}
+
+.music-modal h2 {
+  max-width: 520px;
+  margin: 0 auto 8px;
+  font: 700 clamp(27px, 4vw, 43px)/1.04 var(--serif);
+  letter-spacing: -.04em;
+}
+
+.music-artist {
+  margin: 0 0 25px;
+  color: var(--red);
+  font: 600 12px var(--sans);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.video-frame {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--navy);
+  box-shadow: 7px 8px 0 #d6c39d;
+}
+
+.video-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.music-link {
+  display: inline-flex;
+  gap: 9px;
+  margin-top: 25px;
+  color: var(--navy);
+  font: 600 10px var(--mono);
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.music-link span { color: var(--red); font-size: 16px; }
+.music-link:hover { color: var(--red); }
+
+/* Estado discreto da conexão; o player continua sem bloco ou iframe visível. */
+.soundtrack-control {
+  display: grid;
+  gap: 6px;
+}
+
+.spotify-status {
+  max-width: 255px;
+  margin: 0;
+  color: #355d86;
+  font: 500 9px/1.45 var(--mono);
+  letter-spacing: .02em;
+  text-transform: none;
+}
+
+.spotify-status[data-state="error"] { color: #a71933; }
+body.night .spotify-status { color: #dcecff; }
+body.night .spotify-status[data-state="error"] { color: #ffc4cc; }
+
+@media (max-width: 600px) {
+  .ticket-brand {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: 9px;
+  }
+
+  .ticket-brand b { font-size: 9px; }
+  .ticket-brand small { display: none; }
+  .ticket-main { padding-right: 76px; }
+
+  .ticket-bottom {
+    right: 94px;
+    left: 19px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 5px;
+  }
+
+  .ticket-bottom span {
+    white-space: normal;
+    line-height: 1.35;
+  }
+
+  .music-modal { padding: 49px 20px 30px; }
+}

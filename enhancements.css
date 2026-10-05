@@ -1,0 +1,23 @@
+/* Interactive states kept separately so the visual system remains easy to extend. */
+.london-map.map-awake .map-pin {
+  animation: map-pulse 1.35s ease-in-out infinite;
+}
+
+.london-map.map-awake .pin-two { animation-delay: .22s; }
+.london-map.map-awake .pin-three { animation-delay: .44s; }
+
+.london-map.map-awake::after { background-color: #fff3; }
+
+.promise-btn.is-stamped,
+.button-dark.is-stamped {
+  background: var(--red);
+  box-shadow: 5px 5px 0 var(--navy);
+}
+
+@keyframes map-pulse {
+  50% { filter: brightness(1.12); box-shadow: 0 0 0 9px #d82a4530; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .london-map.map-awake .map-pin { animation: none; }
+}

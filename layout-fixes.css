@@ -1,0 +1,142 @@
+/* Ajustes de legibilidade: os textos agora ocupam áreas livres das ilustrações. */
+.hero-note {
+  right: auto;
+  bottom: 11%;
+  left: max(8vw, 28px);
+  z-index: 4;
+  padding: 10px 13px;
+  border-left: 2px solid var(--red);
+  background: #fffaf0d4;
+  box-shadow: 4px 4px 0 #071f4915;
+  transform: rotate(-2deg);
+}
+
+body.night .hero-note {
+  color: #fffaf0;
+  border-left-color: var(--yellow);
+  background: #071f49ed;
+  box-shadow: 4px 4px 0 #020d20a8;
+}
+
+.map-label {
+  z-index: 7;
+  padding: 7px 10px 7px 7px;
+  border: 1px solid #071f4922;
+  background: #fffaf0eb;
+  box-shadow: 3px 4px 0 #071f4914;
+}
+
+.label-one { top: 9%; left: 7%; }
+.label-two { top: auto; bottom: 8%; left: 6%; }
+.label-three { top: 8%; right: 6%; }
+.map-eye { bottom: 10%; left: 34%; }
+
+.scene-love {
+  z-index: 5;
+  left: auto;
+  right: 34%;
+  bottom: 10px;
+  padding: 4px 7px;
+  background: #103b7477;
+}
+
+@media (max-width: 900px) {
+  .hero-note {
+    right: auto;
+    bottom: 9%;
+    left: max(8vw, 28px);
+  }
+
+  .map-eye { left: 34%; }
+}
+
+@media (max-width: 600px) {
+  .hero-note {
+    bottom: 13%;
+    left: 27px;
+    width: 205px;
+    font-size: 13px;
+  }
+
+  .map-label { font-size: 7px; }
+  .label-one { top: 7%; left: 5%; }
+  .label-two { right: auto; bottom: 5%; left: 4%; }
+  .label-three { top: 7%; right: 4%; }
+  .map-eye { left: 37%; }
+  .scene-love { right: 25%; bottom: 7px; }
+}
+
+/* Novo mapa afetivo: os pontos são sobre o relacionamento, não sobre turismo. */
+.label-four { top: 47%; right: 6%; }
+.label-five { right: 5%; bottom: 7%; }
+.pin-four { top: 49%; right: 36%; color: var(--navy); background: var(--yellow); }
+.pin-five { bottom: 24%; left: 26%; }
+
+/* Referência visual ao relógio do Big Ben no cronômetro. */
+.countdown-card { position: relative; overflow: hidden; }
+.countdown-card > :not(.countdown-tower) { position: relative; z-index: 1; }
+.countdown-tower {
+  position: absolute;
+  right: 7%;
+  bottom: 0;
+  width: 47px;
+  height: 142px;
+  opacity: .33;
+  border: 3px solid var(--yellow);
+  background: #17447f;
+  pointer-events: none;
+}
+
+.countdown-tower::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: -15px;
+  border-right: 36px solid transparent;
+  border-bottom: 40px solid var(--red);
+  border-left: 36px solid transparent;
+}
+
+.countdown-tower::after {
+  content: "10:10";
+  position: absolute;
+  top: 16px;
+  left: 8px;
+  display: grid;
+  width: 25px;
+  height: 25px;
+  place-items: center;
+  border: 3px solid var(--yellow);
+  border-radius: 50%;
+  color: var(--yellow);
+  background: #fff6d5;
+  font: 5px var(--mono);
+}
+
+@media (max-width: 600px) {
+  .london-map {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: start;
+    gap: 6px;
+    padding: 14px;
+  }
+
+  .map-label {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    min-height: 42px;
+    padding: 6px;
+    font-size: 6px;
+  }
+
+  .map-label b { width: 22px; height: 22px; font-size: 8px; }
+  .label-five { grid-column: span 2; width: max-content; justify-self: center; }
+  .map-eye { left: 42%; }
+  .pin-four { top: 50%; right: 36%; }
+  .pin-five { bottom: 26%; left: 31%; }
+  .countdown-tower { right: 4%; transform: scale(.62); transform-origin: bottom right; }
+}
